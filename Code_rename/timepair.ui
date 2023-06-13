@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>timepair</class>
+ <widget class="QMainWindow" name="timepair">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>309</width>
+    <height>512</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Groupe</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="groups">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>291</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+</string>
+    </property>
+    <property name="text">
+     <string> Время занятий</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="table">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>291</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget {
+    background-color: rgba(255,255,255,10);
+    border: 1px solid rgba(255,255,255,10);
+    border-raduis: 10px;
+    color: white;
+    font-weight: bold;
+    font-size:15pt;
+}
+QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1.25, stop:0 #5C3566, stop: 0.6 #623A6F, stop:1 #663F79);
+    color: #e1e5cf;
+
+    border-right: 2px solid #000000; 
+    border-top: 2px solid #000000; 
+    border-left: 2px solid #000000; 
+
+    font-family: Roboto;
+    font-style: Regular;
+    font-weight: bold;
+    font-size: 10pt;
+
+	color: white;
+}
+
+ 
+
+</string>
+    </property>
+    <column>
+     <property name="text">
+      <string>ИД</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Начало пары</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Конец пары</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

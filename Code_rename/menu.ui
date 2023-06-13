@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menu</class>
+ <widget class="QMainWindow" name="menu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>890</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menu</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="journal_btn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>871</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font: bold;
+font-size:15pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string> Журнал / Расписание</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="subjects_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>370</y>
+      <width>211</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font: bold;
+font-size:15pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Дисциплина</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="teacher_btn">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>370</y>
+      <width>221</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font: bold;
+font-size:15pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Преподаватель</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="groupe">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>221</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font: bold;
+font-size:15pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Группа</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_students">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>370</y>
+      <width>221</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font: bold;
+font-size:15pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;
+</string>
+    </property>
+    <property name="text">
+     <string>Студент</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="titlee">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>641</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>51</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+</string>
+    </property>
+    <property name="text">
+     <string>Контроль посещаемости студентов</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="titlee_2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>300</y>
+      <width>291</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>51</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+
+font-weight: Bookman Old Style;
+font: bold;
+font-size:20pt;
+</string>
+    </property>
+    <property name="text">
+     <string>Дополнительно</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>attendance_2</class>
+ <widget class="QMainWindow" name="attendance_2">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1707</width>
+    <height>880</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Attendance</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="attendance">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>10</y>
+      <width>631</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+</string>
+    </property>
+    <property name="text">
+     <string>Журнал посещаемости студентов</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Idds_att">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;</string>
+    </property>
+    <property name="text">
+     <string>ID:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Id_sh_att">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;</string>
+    </property>
+    <property name="text">
+     <string>ID_расписания:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="id_st_att">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;</string>
+    </property>
+    <property name="text">
+     <string>ID_студента:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Insert__att">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>130</y>
+      <width>531</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Записать в БД</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="update___att">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>190</y>
+      <width>531</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Обновить запись в БД</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deletezapic__att">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>250</y>
+      <width>531</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Удалить запись из БД</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2_att">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>70</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+</string>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3_att">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>130</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_att">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>250</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pair1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;</string>
+    </property>
+    <property name="text">
+     <string>Пара-1:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pair3">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>130</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;</string>
+    </property>
+    <property name="text">
+     <string>Пара-3:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pair4">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>190</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;</string>
+    </property>
+    <property name="text">
+     <string>Пара-4:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pair2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>70</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;</string>
+    </property>
+    <property name="text">
+     <string>Пара-2:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_6___att">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>70</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+</string>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_7_att">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>130</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+</string>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mark">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>250</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;</string>
+    </property>
+    <property name="text">
+     <string>Отметка:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="comment">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>70</y>
+      <width>221</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(81, 0, 135,255), stop:0.427447 rgba(41, 61, 132,235), stop:1 rgba(155,79,165,255));
+border-style: solid;
+border-radius:21px;
+color: white;
+border: 1px solid rgba(255,255,255,40);
+font-weight: bold;
+font-size:15pt;</string>
+    </property>
+    <property name="text">
+     <string>Комментарий:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_8__att">
+    <property name="geometry">
+     <rect>
+      <x>1400</x>
+      <y>70</y>
+      <width>301</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+</string>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clears__att">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>720</y>
+      <width>401</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(14, 8, 73, 255), stop:0.130682 rgba(111, 109, 191, 255), stop:0.295455 rgba(199, 199, 221, 255), stop:0.482955 rgba(255, 255, 255, 255), stop:0.625 rgba(251, 251, 251, 255), stop:0.801136 rgba(197, 215, 247, 255), stop:0.965909 rgba(55, 107, 239, 255));</string>
+    </property>
+    <property name="text">
+     <string>Очистить ввод</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="table__att">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>1691</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget {
+    background-color: rgba(255,255,255,10);
+    border: 1px solid rgba(255,255,255,10);
+    border-raduis: 10px;
+    color: white;
+    font-weight: bold;
+    font-size:15pt;
+}
+QHeaderView::section {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1.25, stop:0 #5C3566, stop: 0.6 #623A6F, stop:1 #663F79);
+    color: #e1e5cf;
+
+    border-right: 2px solid #000000; 
+    border-top: 2px solid #000000; 
+    border-left: 2px solid #000000; 
+
+    font-family: Roboto;
+    font-style: Regular;
+    font-weight: bold;
+    font-size: 10pt;
+
+	color: white;
+}
+
+ 
+
+</string>
+    </property>
+    <column>
+     <property name="text">
+      <string>ИД</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ID_студента:</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ID-расписания:</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Пара-1</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Пара-2</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Пара-3</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Пара-4</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Отметка</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Комментарий</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="cleant_v_att">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>720</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Очистить таблицу</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="back_to_menu">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>780</y>
+      <width>1691</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Назад в главное меню</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="vuvod___att">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>720</y>
+      <width>441</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Вывод данных</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Search_btn_att">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>720</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(14, 8, 73, 255), stop:0.130682 rgba(111, 109, 191, 255), stop:0.295455 rgba(199, 199, 221, 255), stop:0.482955 rgba(255, 255, 255, 255), stop:0.625 rgba(251, 251, 251, 255), stop:0.801136 rgba(197, 215, 247, 255), stop:0.965909 rgba(55, 107, 239, 255));</string>
+    </property>
+    <property name="text">
+     <string>Поиск по записи</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_seatch__att">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>720</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 10px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+
+</string>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shedule_btn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>1691</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+background-color: rgba(255,255,255,30);
+border: 1px solid rgba(255,255,255,40);
+border-raduis: 7px;
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QPushButton:hover {
+background-color: rgba(0, 255, 120, 0.4);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,70);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Расписание</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4_att">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>190</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3__att">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>190</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3__att_2">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>250</y>
+      <width>321</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgba(255,255,255,50);
+color: white;
+font-weight: bold;
+font-size:20pt;
+}
+QLineEdit:hover {
+background-color: rgba(255,255,255, 0.5);
+}
+</string>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
